@@ -12,6 +12,7 @@ pipeline {
 											sh '''
 										 		yum install httpd -y 
 												service httpd start
+												rm rf /var/www/html/index.html
 												echo "hello all" >>/var/www/html/index.html
 												chmod 777 /var/www/html/index.html
 										    '''
